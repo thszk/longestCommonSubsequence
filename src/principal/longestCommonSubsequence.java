@@ -17,7 +17,7 @@ public class longestCommonSubsequence {
     /*funcao lcs: manipula duas strings informadas por parametros
      *a fim de obter a quantidade de caracteres na sequencia e a propria
      *sequencia comum*/
-    public void lcs(String x, String y){
+    public int[][] lcs(String x, String y){
         int m = x.length(); /*primeira palavra*/
         int n = y.length(); /*segunda palavra*/
         int c[][] = new int[m+1][n+1];
@@ -63,10 +63,10 @@ public class longestCommonSubsequence {
         }
         
         this.maiorSequencia = c[m][n];
-        //return c;
+        return c;
     }
    
-    /*      usado em testes
+    /*      usado em testes*/
     //print matriz
     public void printMatriz(int[][] m) {
         int lin = m.length;
@@ -80,5 +80,5 @@ public class longestCommonSubsequence {
         }
         System.out.print("\n");
     }
-    */
+    
 }
